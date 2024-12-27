@@ -1,0 +1,89 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.lembayung{
+    background: rgb(42,0,78);
+    background: linear-gradient(90deg, rgba(42,0,78,1) 0%, rgba(80,0,115,1) 100%);
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between brand and nav items */
+    align-items: center; /* Center items vertically */
+    padding: 15px 30px;
+    background: rgb(42,0,78);
+    background: linear-gradient(90deg, rgba(42,0,78,1) 0%, rgba(80,0,115,1) 100%);
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.navbar.scrolled {
+    background-color: #495057; /* Lighter on scroll */
+}
+
+/* Navbar brand styles */
+.navbar-brand {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.navbar-brand:hover {
+    color: #ffc107; /* Yellow color on hover */
+}
+
+/* Navbar nav styles */
+.navbar-nav {
+    display: flex; /* Use flexbox for nav items */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Navbar link styles */
+.nav-link {
+    color: #ffffff; /* White text */
+    padding: 10px 15px;
+    margin: 0 5px; /* Space between links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    color: #ffc107; /* Yellow color on hover */
+}
+
+/* Active link styles */
+.nav-item.active .nav-link {
+    background-color: #ffc107; /* Yellow background for active link */
+    color: #343a40; /* Dark text for active link */
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        margin-bottom: 10px; /* Space below brand */
+    }
+
+    .nav-link {
+        padding: 8px 10px;
+    }
+}
